@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>About| Creative Commons Summit</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  *{
+    margin:auto;
+  }
+  .my-logo{
+  position:absolute;
+  bottom: 0px;
+  padding: 5px;
+  left: 0px;
+ }
+ .my-logo img{
+  height: 100px;
+ }
+ .navbar-brand{
+  max-width: 120px;
+ }
+
+.navbar{
+  min-height: 100px;
+}
+ body {
+  background-color: white;
+  font-family: 'Segoe UI', sans-serif, arial;
+}
+.nav-item:hover{
+  background-color: blue;
+  text-decoration:underline;
+}
+.navbar .bi {
+  font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .bi:hover {
+  color: #007bff; /* Bootstrap blue or choose your own */
+}
+
+
+
+.intro-text{
+  font-size:2em;
+  animation: movetext 5s infinite alternate;
+  display: inline-block;
+  position: relative;
+}
+
+@keyframes movetext {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  40% {
+    left: -120px;
+    opacity: 0;
+  }
+  60% {
+    left: -120px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-section{
+  padding-top:30px;
+  padding-bottom: 60px;
+  margin-left:0px;
+}
+.hero-section h1 {
+  min-height:20vh;
+  font-size: 4rem;
+  
+}
+.hero-description{
+display:inline-block;
+padding:0;
+border-radius:1px;
+color:#333;
+border:2px solid #ccc;
+padding:10px 15px;
+max-width:800px;
+
+}
+.date{
+  font-size:20px;
+}
+/* Background Decorative Icons */
+.bg-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+
+}
+/*circle*/
+.bg-decor .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #25010110;
+  border-radius: 50%;
+  top: 20%;
+  left: 8%;
+  background-color: #ff6b6b60;;
+}
+/*diamond*/
+.bg-decor .diamond {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #20c99760;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 0%;
+  border-radius: 8px;
+}
+/* Star */
+.bg-decor .star {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  width: 10px;
+  height: 10px;
+  background-color: #fbc531;
+  border-radius: 50%;
+  box-shadow: 
+    10px 0 #fbc531, 
+    -10px 0 #fbc531, 
+    0 10px #fbc531, 
+    0 -10px #fbc531;
+}
+
+/* Dot */
+.bg-decor .dot {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 12px;
+  height: 12px;
+  background-color: #1e90ff80;
+  border-radius: 50%;
+}
+
+/* Triangle */
+.bg-decor .triangle {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #ff634780; /* coral */
+}
+.icon-side img{
+  border:1px solid #333;
+  border-radius:5px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  padding: 25px;
+  
+
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #be1640;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+.past-summits{
+  background-color: #f8f9fa;
+}
+
+.summit-card {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.summit-card img {
+  transition: 0.5s ease;
+}
+
+.summit-card:hover img {
+  transform: scale(1.05);
+}
+
+.summit-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(179, 46, 46, 0.8); /* Red overlay */
+  text-align: center;
+  padding: 30px;
+  transition: 0.5s ease;
+}
+
+.summit-card:hover .overlay {
+  background: rgba(179, 46, 46, 0.9);
+}
+.footer-bottom {
+  background-color:#333;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  flex-wrap: wrap;
+}
+.text{
+  font-size:30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  flex: 1 1 250px;
+}
+.footer-left .text{
+margin-left: 0px;
+padding-left: 0px;
+}
+.footer-left .cc-logo {
+max-width: 100px;
+margin-right: 0px;
+display: inline-block;
+vertical-align: middle;
+
+}
+
+.footer-right {
+  flex: 2 1 300px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-right a {
+  color:white;
+  text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+      <!-- Navbar -->
+      <!-- upper-Navbar -->
+<nav class="navbar navbar-light bg-dark py-o sticky-top">
+  <div class="container-fluid d-flex space-between">
+    <span class="navbar-text text-primary">
+      <strong class="intro-text fw-bold">Welcome to my awesome site!</strong>
+    </span>
+    <div class="d-flex gap-4">
+    <!--Whatsapp-->
+            <a href="https://wa.me/678349381" target="_blank" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
+            <!--LinkedIn-->
+            <a href="https://www.linkedin.com/in/Forghab Ange" target="_blank" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+            <!--Github-->
+            <a href="https://github.com/FORGHABANGE" target="_blank" class="text-white fs-4"><i class="bi bi-github"></i></a>
+             <!--Email-->
+            <a href="mailto:angelucie2005@gmail.com" target="_blank" class="text-white fs-4"><i class="bi bi-envelope-fill"></i></a>
+           <!--Facebook-->
+            <a href="https://www.facebook.com/Ange Lucie" target="_blank" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+     </div>
+    </div>
+</nav>
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary border-bottom shadow-sm px-4 py-3 sticky-top">
+    <div class="container">
+      <div class="my-logo">
+    <a href="About.html"><img src="AL-logo.png" alt="my logo" class="navbar-brand"></a>
+    </div>
+     <div class=" hover-underline collapse navbar-collapse justify-content-between d-flex mb-0" id="navbarNav">
+      <ul class="navbar-nav me-2 mb-lg-0">
+        <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Contact.html">Contact</a></li>
+ </ul>
+    </div>
+    </div>
+  </nav>
+ <section class="hero-section bg-light text-center position-relative">
+<div class="container">
+  <div class="hero-content">
+    <h1 class="hero-title">
+  <span class="text-gradient">CREATIVE COMMONS</span><br>
+      GLOBAL SUMMIT 2015
+    </h1>
+  <div class="hero-description bg-white"><p class="mb-0">The Global Summit is a gathering of experts, academics, and activists from around the world who are part of the Creative Commons network.<br> Held every two years in a different country, it aims to connect and strengthen this vibrant community.
+
+For the 2015 edition, the summit broadened its reach to include new organizations and individuals passionate about collaboration on projects that support the Commons,<br> open culture, and free knowledge.<br>
+
+If you're passionate about open access and knowledge sharing , whether you're a free software advocate, Wikipedian, librarian, lawyer, or part of an NGO, gallery, museum, or government, this summit is for you. Come be part of building a stronger, more connected commons. </p></div>
+  <p class="date mt-4">please contact us per E-mail for any further questions about CC Global Submit 2015!</p>
+  <a href="mailto:ccsummit2015@cckorea.org" style="color: blue; font: size 30px;">ccsummit2015@cckorea.org</a>
+   <!-- Background Icons -->
+  <div class="bg-decor">
+    <div class="circle"></div>
+    <div class="diamond"></div>
+    <div class="star"></div>
+  <div class="dot"></div>
+  <div class="triangle"></div>
+  </div>
+  </div>
+  </section>
+  <section class="cc-brand bg-white mt-5 text-center">
+    <div class="container">
+      <!--introduction-->
+  <div class="intro text-center position-relative">
+    <h2 class="heading fw-bold">Creative Commons Global Submit 2015 Logo</h2>
+    <p class="mt-3">The logo of CC Global Summit 2015 was decided through the logo competition from 8 june to 7 july.<br>
+      After online public voting and selection Commitee's judging process, the logo from Naresh Agrawal won the prize.<br>
+      After consultation with Mr.Agrawal we optimised the prize-winning-logo fo this year's summit as following: </p>
+  </div>
+  <div class="icon-side justify-content-center align-items-center mt-5 ">
+    <img src="ccg-icon.jpg" alt="my-logo">
+  </div>
+</div>
+  </section>
+<!-- Past Summits Section -->
+<section class="past-summits text-center py-5">
+  <div class="container">
+    <!-- Heading -->
+    <h2 class="fw-bold position-relative d-inline-block section-title">
+      See the past <span class="text-black">CC</span> Global Summits
+    </h2>
+    <!-- Description -->
+    <p class="text-muted mt-3">
+      Take a look at the last two CC Global Summits which took place in Buenos Aires and in Warsaw.
+    </p>
+
+    <!-- Images Row -->
+    <div class="row justify-content-center mt-5">
+      <!-- 2013 Card -->
+      <div class="col-md-5 mb-4">
+        <div class="summit-card position-relative">
+          <img src="mine.jpg" class="img-fluid w-100" alt="CC Global Summit 2013">
+          <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
+            <h3 class="fw-bold">2013</h3>
+            <p>CC Global Summit 2013 in Buenos Aires</p>
+          </div>
+        </div>
+      </div>
+
+      <!--2011 card-->
+      <div class="col-md-5 mb-4">
+        <div class="summit-card position-relative">
+          <img src="hers.jpg" class="img-fluid w-100" alt="CC Global Summit 2011">
+          <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
+            <h3 class="fw-bold">2011</h3>
+            <p>CC Global Summit 2011 in Warsaw</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <!-- Footer Bottom Section -->
+<div class="footer-bottom">
+  <div class="footer-left text-white">
+    <img src="cc-icon.png"alt="Creative Commons Logo" class="cc-logo ">
+    <div class=" text fw-bold">Creative<br> Commons korea</div>
+  </div>
+   <div class="footer-right text-white">
+    <p>2015 Creative Commons Korea. Some Rights Reserved.</p>
+    <p>
+     Unless otherwise stated, all contents of this website are licensed under the Creative Commons Attribution 2.0 Korea License.<br>
+For more details on the terms of use and permissions, please refer to
+      <a href="https://creativecommons.org/licenses/by/2.0/kr/" target="_blank">https://creativecommons.org/licenses/by/2.0/kr/</a>this page.
+    </p>
+  </div>
+</div>
+
+</footer>
+</footer>
+  </body>
+</html>
+  

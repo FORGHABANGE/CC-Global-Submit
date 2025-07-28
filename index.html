@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home| Creative Commons Summit</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+ .my-logo{
+  position:absolute;
+  bottom: 0px;
+  padding: 5px;
+  left: 0px;
+ }
+ .my-logo img{
+  height: 100px;
+ }
+  body {
+     margin:0;
+    padding: 0;
+     background-color: white;
+  font-family: 'Segoe UI', sans-serif, arial;
+}
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Hero Section */
+.hero-section{
+  padding-top:60px;
+  padding-bottom: 60px;
+  margin-left:50px;
+  
+}
+.hero-section h1 {
+  min-height:20vh;
+  font-size: 4rem;
+  
+}
+.hero-description{
+display:inline-block;
+padding:0;
+border-radius:1px;
+color:#333;
+border:2px solid #ccc;
+padding:10px 15px;
+max-width:600px;
+
+}
+.date{
+  font-size:20px;
+}
+/* Side Menu */
+.side-menu {
+  top: 20%;
+  right: 1rem;
+  z-index: 1000;
+}
+.side-menu i {
+  color: #444;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.side-menu i:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 812px) {
+  .side-menu {
+    display: none !important;
+  }
+}
+
+
+/* Background Decorative Icons */
+.bg-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+
+}
+.bg-decor .circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #00000010;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+}
+.bg-decor .cross {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+}
+.cross::before, .cross::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #00000010;
+}
+.cross::before {
+  transform: rotate(45deg);
+}
+.cross::after {
+  transform: rotate(-45deg);
+}
+.bg-decor .diamond {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00000010;
+  transform: rotate(45deg);
+  top: 60%;
+  left: 80%;
+}
+.nav-item:hover{
+  background-color: blue;
+  text-decoration:underline;
+}
+  /* MAIN PROGRAM */
+.main-program {
+  background-color: #1c1c1c;
+}
+.main-program h2{
+  text-align: center;
+position: relative;
+  margin-bottom:0px;
+}
+.main-program h2::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ccc;
+  margin: 10px auto 0 auto;
+}
+
+.program-box {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  transition: transform 0.3s, border 0.3s;
+}
+.program-box:hover {
+  transform: translateY(-5px);
+  border: 3px solid #aaa;
+}
+
+/* FEATURED SPEAKERS */
+.featured-speakers img {
+  border: 2px solid #ccc;
+}
+.featured-speakers h6 {
+  margin-bottom: 4px;
+}
+.featured-speakers p {
+  font-size: 0.9rem;
+}
+.partner-section {
+  background-color: #2d2d2d;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.partner-section h4 {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.partner-section h4::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #ccc;
+  margin: 0.5rem auto 0;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.partners img {
+  filter: grayscale(100%) brightness(0.8);
+  max-height: 30px;
+  transition: all 0.3s ease;
+}
+
+.partners img:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  flex-wrap: wrap;
+}
+.text{
+  font-size:30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  flex: 1 1 250px;
+}
+
+.footer-left .cc-logo {
+max-width: 100px;
+margin-right: 0px;
+display: inline-block;
+vertical-align: middle
+}
+.footer-left .text{
+margin-left: 0px;
+padding-left: 0px;
+}
+.footer-right {
+  flex: 2 1 300px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-right a {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.navbar-brand{
+  max-width:120px;
+
+}
+.navbar{
+  min-height: 100px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbarnav{
+ margin:0 auto; 
+
+}
+.featured-speakers p:first-of-type {
+  position: relative;
+  padding-bottom: 10px; 
+  margin-bottom: 10px;   
+}
+
+.featured-speakers p:first-of-type::after {
+  content: '';
+  display: block;
+  width: 30px; 
+  height: 2px;
+  background-color: #333; 
+  margin-top: 5px;
+}
+.featured-speakers h2{
+  position: relative;
+ text-align: center;
+  margin-bottom: 10px;
+}
+.featured-speakers h2::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color:#333;
+  margin: 2px auto 0 auto;
+}
+.featured-speakers h2::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.col-md-6 {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.checkerboard {
+  width: 70px;
+  height: 70px;
+  
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+                    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #ccc 75%),
+                    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+  position: absolute;
+  top: -20px;
+  left:-10px;
+  z-index:1;
+}
+.square-img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  z-index: 2; 
+  position: relative;
+}
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary border-bottom shadow-sm px-4 py-3 sticky-top">
+    <div class="container">
+      <div class="my-logo">
+    <a href="index.html"><img src="AL-logo.png" alt="my logo" class="navbar-brand"></a>
+    </div>
+     <div class=" hover-underline collapse navbar-collapse justify-content-end d-flex mb-0" id="navbarNav">
+      <ul class="navbar-nav me-2 mb-lg-0">
+        <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Contact.html">Contact</a></li>
+ </ul>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-start mt-5 position-relative">
+    <p class="mb-3 fs-3 text-danger">Hello! Sharing world</p>
+    <h1 class="fw-bold">
+      <span class="text-gradient" >CREATIVE COMMONS</span><br>
+      GLOBAL SUMMIT 2015
+    </h1>
+    <div class="hero-description"><p class="mb-0">A Joyful celebration believing in the value of openess and sharing, creating <br>a positive change with people from over 80 cities is taking place in October, in Korea. </p></div>
+  <p class="date text-primary mt-4 fw-bold">2015.10.15 (THU)~16(FRI)<br>@ National Meseum of Korea, Art Center Nabi and more.</p>
+  
+  <!-- Right Floating Side Menu -->
+  <aside class="side-menu d-flex flex-column align-items-center position-absolute">
+    <div class="text-center my-3">
+      <i class="bi bi-person-plus-fill fs-4"></i><br><small>Follow</small>
+    </div>
+    <div class="text-center my-3">
+      <i class="bi bi-envelope-fill fs-4"></i><br><small>Message</small>
+    </div>
+    <div class="text-center my-3">
+      <i class="bi bi-bookmark-fill fs-4"></i><br><small>Save</small>
+    </div>
+    <div class="text-center my-3">
+      <i class="bi bi-share-fill fs-4"></i><br><small>Share</small>
+    </div>
+  </aside>
+  </section>
+
+  <!-- Background Icons -->
+  <div class="bg-decor">
+    <div class="circle"></div>
+    <div class="cross"></div>
+    <div class="diamond"></div>
+    <div class=""></div>
+  </div>
+  <!-- MAIN PROGRAM SECTION -->
+<section class="main-program text-white py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center mb-5">Main Program</h2>
+    <div class="underline"></div>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-md-2">
+        <div class="program-box p-3 h-100">
+          <i class="bi bi-mic-fill fs-1 mb-3"></i>
+          <h6 class="text-danger fw-bold">Lecture</h6>
+          <p>Listen to the speakers from various countries about the opening.</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="program-box p-3 h-100">
+          <i class="bi bi-images fs-1 mb-3"></i>
+          <h6 class="text-warning fw-bold">CC Exhibition</h6>
+          <p>Appreciate various creations applying CC licenses at artist booths.</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="program-box p-3 h-100">
+          <i class="bi bi-chat-dots-fill fs-1 mb-3"></i>
+          <h6 class="text-primary fw-bold">Forum</h6>
+          <p>Share your thoughts and opinions with experts on each topic.</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="program-box p-3 h-100 active">
+          <i class="bi bi-easel2-fill fs-1 mb-3"></i>
+          <h6 class="text-info fw-bold">Workshop</h6>
+          <p>Try using open-source licenses rather than just watching.</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="program-box p-3 h-100">
+          <i class="bi bi-people-fill fs-1 mb-3"></i>
+          <h6 class="text-danger fw-bold">CC Ignite</h6>
+          <p>Network with CC affiliates from around the world.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="#" class="text-white text-decoration-underline">SEE THE WHOLE PROGRAM</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SPEAKERS SECTION -->
+<section class="featured-speakers py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Featured Speakers</h2>
+    <div class="row g-4">
+      <!-- SPEAKER 1 -->
+      <div class="col-md-6 d-flex">
+          <div class="checkerboard"></div>
+      <img src="https://i.pravatar.cc/100?img=1" alt="Speaker 1" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">Yochai Benkler</h6>
+          <p class="text-danger small">Berkman Professor at Harvard Law</p>
+          <p class="mb-0">He studies commons-based peer production, and wrote “The Wealth of Networks”.</p>
+        </div>
+      </div>
+
+      <!-- SPEAKER 2 -->
+      <div class="col-md-6 d-flex">
+        <div class="checkerboard"></div>
+        <img src="https://i.pravatar.cc/100?img=2" alt="Speaker 2" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">Kilnam Chon</h6>
+          <p class="text-primary small">Internet Pioneer of Asia</p>
+          <p class="mb-0">Led the internet to Asia, recognized in the Internet Hall of Fame.</p>
+        </div>
+      </div>
+
+      <!-- SPEAKER 3 -->
+      <div class="col-md-6 d-flex">
+        <div class="checkerboard"></div>
+        <img src="https://i.pravatar.cc/100?img=3" alt="Speaker 3" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">SohYeong Noh</h6>
+          <p class="text-danger small">Director of Art Center Nabi</p>
+          <p class="mb-0">Focuses on media art and education. Works to bridge art and technology.</p>
+        </div>
+      </div>
+
+      <!-- SPEAKER 4 -->
+      <div class="col-md-6 d-flex">
+        <div class="checkerboard"></div>
+        <img src="https://i.pravatar.cc/100?img=4" alt="Speaker 4" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">Julia Leda</h6>
+          <p class="text-danger small">President of Young Pirates of Europe</p>
+          <p class="mb-0">Active in politics and copyright education across Europe.</p>
+        </div>
+      </div>
+
+      <!-- SPEAKER 5 -->
+      <div class="col-md-6 d-flex">
+        <div class="checkerboard"></div>
+        <img src="https://i.pravatar.cc/100?img=5" alt="Speaker 5" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">Lila Tretikov</h6>
+          <p class="text-danger small">Exec Director of Wikimedia Foundation</p>
+          <p class="mb-0">Supports free access to knowledge, led Wikimedia globally.</p>
+        </div>
+      </div>
+
+      <!-- SPEAKER 6 -->
+      <div class="col-md-6 d-flex">
+        <div class="checkerboard"></div>
+        <img src="https://i.pravatar.cc/100?img=6" alt="Speaker 6" class="img-fluid square-img me-3 rounded-0" width="80">
+        <div>
+          <h6 class="fw-bold">Ryan Merkley</h6>
+          <p class="text-danger small">CEO of Creative Commons</p>
+          <p class="mb-0">Former CCO of Mozilla. Leads strategy for open licensing advocacy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+  <!-- Partner Section -->
+<div class="partner-section">
+  <h4>Partner</h4>
+  <div class="partners">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Mozilla_Foundation_logo.svg" alt="Mozilla">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Naver_Logotype.svg" alt="Naver">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/KakaoTalk_logo.svg" alt="Daum Kakao">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="Airbnb">
+  </div>
+</div>
+
+<!-- Footer Bottom Section -->
+<div class="footer-bottom">
+  <div class="footer-left">
+    <img src="cc-icon.png"alt="Creative Commons Logo" class="cc-logo">
+    <div class=" text fw-bold">Creative<br> Commons korea</div>
+  </div>
+  <div class="footer-right">
+    <p>2015 Creative Commons Korea. Some Rights Reserved.</p>
+    <p>
+     Unless otherwise stated, all contents of this website are licensed under the Creative Commons Attribution 2.0 Korea License.<br>
+For more details on the terms of use and permissions, please refer to
+      <a href="https://creativecommons.org/licenses/by/2.0/kr/" target="_blank">https://creativecommons.org/licenses/by/2.0/kr/</a>this page.
+    </p>
+  </div>
+</div>
+</footer>
+</body>
+</html>
